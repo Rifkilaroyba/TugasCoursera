@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO: judul bermakna & deskripsi halaman -->
     <title>Portofolio Developer - Rifki Laroyba</title>
-    <meta name="description"
-        content="Portofolio pribadi Rifki Laroyba, seorang pengembang web yang menampilkan proyek, keterampilan, dan cara untuk menghubungi.">
+    <meta name="description" content="Portofolio pribadi Rifki Laroyba, seorang pengembang web yang menampilkan proyek, keterampilan, dan cara untuk menghubungi.">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
     <!-- Skip link: memudahkan navigasi keyboard langsung ke konten utama -->
@@ -25,8 +22,9 @@
 
         <nav role="navigation" aria-label="Navigasi utama">
             <!-- Menu hamburger: kini dikendalikan oleh toggleMenu() di script.js -->
-            <button type="button" id="menu-toggle-btn" class="menu-toggle" aria-expanded="false"
-                aria-controls="primary-navigation" aria-label="Buka atau tutup menu navigasi">
+            <button type="button" id="menu-toggle-btn" class="menu-toggle"
+                    aria-expanded="false" aria-controls="primary-navigation"
+                    aria-label="Buka atau tutup menu navigasi">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -71,29 +69,27 @@
                 <article class="project-card" data-category="app">
                     <figure>
                         <img src="images/project-1.png"
-                            alt="Tangkapan layar aplikasi pelacak tugas dengan daftar tugas dan tombol tambah tugas">
+                             alt="Tangkapan layar aplikasi pelacak tugas dengan daftar tugas dan tombol tambah tugas">
                         <figcaption>Aplikasi Pelacak Tugas</figcaption>
                     </figure>
                     <h3>Aplikasi Pelacak Tugas</h3>
-                    <p>Aplikasi sederhana untuk mencatat dan mengelola tugas harian, dibangun dengan HTML, CSS, dan
-                        JavaScript murni.</p>
+                    <p>Aplikasi sederhana untuk mencatat dan mengelola tugas harian, dibangun dengan HTML, CSS, dan JavaScript murni.</p>
                 </article>
 
                 <article class="project-card" data-category="web">
                     <figure>
                         <img src="images/project-2.png"
-                            alt="Tangkapan layar situs toko online dengan grid produk dan keranjang belanja">
+                             alt="Tangkapan layar situs toko online dengan grid produk dan keranjang belanja">
                         <figcaption>Situs Toko Online (Demo)</figcaption>
                     </figure>
                     <h3>Situs Toko Online (Demo)</h3>
-                    <p>Demo antarmuka toko online dengan tampilan produk responsif dan fitur keranjang belanja
-                        sederhana.</p>
+                    <p>Demo antarmuka toko online dengan tampilan produk responsif dan fitur keranjang belanja sederhana.</p>
                 </article>
 
                 <article class="project-card" data-category="data">
                     <figure>
                         <img src="images/project-3.png"
-                            alt="Tangkapan layar dasbor cuaca yang menampilkan suhu dan prakiraan lima hari">
+                             alt="Tangkapan layar dasbor cuaca yang menampilkan suhu dan prakiraan lima hari">
                         <figcaption>Dasbor Cuaca</figcaption>
                     </figure>
                     <h3>Dasbor Cuaca</h3>
@@ -153,14 +149,11 @@
     </footer>
 
     <!-- Modal lightbox: menampilkan gambar proyek dalam ukuran penuh saat diklik -->
-    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true"
-        aria-label="Pratinjau gambar proyek">
-        <button type="button" id="lightbox-close" class="lightbox-close"
-            aria-label="Tutup pratinjau gambar">&times;</button>
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Pratinjau gambar proyek">
+        <button type="button" id="lightbox-close" class="lightbox-close" aria-label="Tutup pratinjau gambar">&times;</button>
         <img id="lightbox-image" src="" alt="">
     </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
