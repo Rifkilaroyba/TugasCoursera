@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: judul bermakna & deskripsi halaman -->
+    <title>Portofolio Developer - Rifki Laroyba</title>
+    <meta name="description"
+        content="Portofolio pribadi Rifki Laroyba, seorang pengembang web yang menampilkan proyek, keterampilan, dan cara untuk menghubungi.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Skip link: memudahkan navigasi keyboard langsung ke konten utama -->
+    <a href="#main-content" class="skip-link">Lompat ke konten utama</a>
+
+    <!-- ===================== HEADER & NAVIGASI ===================== -->
+    <header>
+        <h1>Rifki Laroyba</h1>
+        <p class="tagline">Web Developer &middot; Pembelajar Sepanjang Hayat</p>
+
+        <nav role="navigation" aria-label="Navigasi utama">
+            <!-- Menu hamburger: kini dikendalikan oleh toggleMenu() di script.js -->
+            <button type="button" id="menu-toggle-btn" class="menu-toggle" aria-expanded="false"
+                aria-controls="primary-navigation" aria-label="Buka atau tutup menu navigasi">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="#about-me">Tentang Saya</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#skills">Keterampilan</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ===================== TENTANG SAYA ===================== -->
+        <section id="about-me" aria-labelledby="about-me-heading">
+            <h2 id="about-me-heading">Tentang Saya</h2>
+            <p>
+                Halo! Saya seorang pengembang web yang tertarik membangun situs
+                yang cepat, mudah diakses, dan ramah pengguna. Saya senang
+                mempelajari teknologi baru dan menerapkannya pada proyek nyata,
+                termasuk bereksperimen dengan alat bantu seperti GitHub Copilot
+                untuk menulis kode secara lebih efisien.
+            </p>
+        </section>
+
+        <!-- ===================== PROYEK ===================== -->
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Proyek</h2>
+
+            <!-- Filter kategori: dikendalikan oleh filterProjects() di script.js -->
+            <div class="project-filters" role="group" aria-label="Filter proyek berdasarkan kategori">
+                <button type="button" class="filter-btn active" data-category="all">Semua</button>
+                <button type="button" class="filter-btn" data-category="app">Aplikasi</button>
+                <button type="button" class="filter-btn" data-category="web">Web</button>
+                <button type="button" class="filter-btn" data-category="data">Data</button>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card" data-category="app">
+                    <figure>
+                        <img src="images/project-1.png"
+                            alt="Tangkapan layar aplikasi pelacak tugas dengan daftar tugas dan tombol tambah tugas">
+                        <figcaption>Aplikasi Pelacak Tugas</figcaption>
+                    </figure>
+                    <h3>Aplikasi Pelacak Tugas</h3>
+                    <p>Aplikasi sederhana untuk mencatat dan mengelola tugas harian, dibangun dengan HTML, CSS, dan
+                        JavaScript murni.</p>
+                </article>
+
+                <article class="project-card" data-category="web">
+                    <figure>
+                        <img src="images/project-2.png"
+                            alt="Tangkapan layar situs toko online dengan grid produk dan keranjang belanja">
+                        <figcaption>Situs Toko Online (Demo)</figcaption>
+                    </figure>
+                    <h3>Situs Toko Online (Demo)</h3>
+                    <p>Demo antarmuka toko online dengan tampilan produk responsif dan fitur keranjang belanja
+                        sederhana.</p>
+                </article>
+
+                <article class="project-card" data-category="data">
+                    <figure>
+                        <img src="images/project-3.png"
+                            alt="Tangkapan layar dasbor cuaca yang menampilkan suhu dan prakiraan lima hari">
+                        <figcaption>Dasbor Cuaca</figcaption>
+                    </figure>
+                    <h3>Dasbor Cuaca</h3>
+                    <p>Dasbor yang menampilkan data cuaca terkini dan prakiraan menggunakan API cuaca pihak ketiga.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===================== KETERAMPILAN ===================== -->
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Keterampilan</h2>
+            <ul class="skills-list">
+                <li>HTML5 &amp; CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>Responsive Web Design</li>
+                <li>Git &amp; GitHub</li>
+                <li>Aksesibilitas Web (WCAG)</li>
+                <li>Integrasi REST API</li>
+                <li>React</li>
+                <li>Pemecahan Masalah</li>
+            </ul>
+        </section>
+
+        <!-- ===================== KONTAK ===================== -->
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Hubungi Saya</h2>
+
+            <form action="#" method="post" novalidate>
+                <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                    <span class="error-message" id="name-error" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                    <span class="error-message" id="email-error" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message" id="message-error" aria-live="polite"></span>
+                </div>
+
+                <button type="submit">Kirim Pesan</button>
+                <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <p>&copy; 2026 Rifki Laroyba. Seluruh hak cipta dilindungi.</p>
+    </footer>
+
+    <!-- Modal lightbox: menampilkan gambar proyek dalam ukuran penuh saat diklik -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true"
+        aria-label="Pratinjau gambar proyek">
+        <button type="button" id="lightbox-close" class="lightbox-close"
+            aria-label="Tutup pratinjau gambar">&times;</button>
+        <img id="lightbox-image" src="" alt="">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
